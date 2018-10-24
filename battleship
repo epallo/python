@@ -15,9 +15,25 @@ destroyer = ship(3)
 
 shiptypes = ["2 patrolboats", "2 battleships", "1 submarine", "1 destroyer"]
 
+def grid_size():
+	grid_size = 10
+	return grid_size
+            
+def make_grid(size):
+	return [[0] * size for _ in range(size)]
+
+def print_grid(grid):
+    for row in grid:
+     print(row)
 
 
-print("Your available boats for deployment are: ", ', '.join(shiptypes))
+
+grids = make_grid(grid_size())
+print("\nWelcome to Battleships!\n")
+print_grid(grids)
+
+print("\nThis will be the area where you will deploy your ships.\n")
+print("Your available boats for deployment are: ", ', '.join(shiptypes),"\n")
 coord4pb1=input("Select ship placement for patrolboat 1 (x,y): ")
 print("You have placed patrolboat 1 at", coord4pb1)
 coord4pb2=input("Select ship placement for patrolboat 2 (x,y): ")
@@ -29,4 +45,12 @@ print("You have placed battleship 2 at", coord4bs2)
 coord4subm=input("Select ship placement for submarine (x,y): ")
 print("You have placed submarine at", coord4subm)
 coord4des=input("Select ship placement for destroyer (x,y): ")
-print("You have place destroyer at", coord4des)
+print("You have place destroyer at", coord4des,"/n")
+print(".\n.\n.\n.\n.\n.\n.\n.\npreparing...\n.\n.\n.\n.\n.\n.")
+print("\nYou have successfully hid your ships. Time to attack the opponent!\n")
+
+print_grid(grids)
+
+usrattack=input("\nInput coordinates of your attack (x,y): ")
+
+
