@@ -1,0 +1,32 @@
+#!/usr/bin/python3
+
+class ship:
+	def __init__(self, size):
+		self.size = size	
+		
+patrolboat1 = ship(2)
+patrolboat2 = ship(2)
+battleship1 = ship(3)
+battleship2 = ship(3)
+submarine = ship(3)
+destroyer = ship(3)
+
+
+
+shiptypes = ["2 patrolboats", "2 battleships", "1 submarine", "1 destroyer"]
+
+
+
+print("Your available boats for deployment are: ", ', '.join(shiptypes))
+coord4pb1=input("Select ship placement for patrolboat 1 (x,y): ")
+print("You have placed patrolboat 1 at", coord4pb1)
+coord4pb2=input("Select ship placement for patrolboat 2 (x,y): ")
+print("You have placed patrolboat 2 at", coord4pb2)
+coord4bs1=input("Select ship placement for battleship 1 (x,y): ")
+print("You have placed battleship 1 at", coord4bs1)
+coord4bs2=input("Select ship placement for battleship 2 (x,y): ")
+print("You have placed battleship 2 at", coord4bs2)
+coord4subm=input("Select ship placement for submarine (x,y): ")
+print("You have placed submarine at", coord4subm)
+coord4des=input("Select ship placement for destroyer (x,y): ")
+print("You have place destroyer at", coord4des)
